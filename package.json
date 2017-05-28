@@ -1,0 +1,22 @@
+{
+	"name": "osgw",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"directories": {
+		"doc": "docs"
+	},
+	"scripts": {
+		"build": "bs export -o docs"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/robgaston/osgw.git"
+	},
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/robgaston/osgw/issues"
+	},
+	"homepage": "https://github.com/robgaston/osgw#readme"
+}

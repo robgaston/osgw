@@ -1,4 +1,4 @@
-title: Open-source Geospatial Web Stack Workshop, Day 1
+title: Open-source Geospatial Web Stack Workshop
 class: animation-fade
 layout: true
 

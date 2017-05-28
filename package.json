@@ -7,6 +7,7 @@
 		"doc": "docs"
 	},
 	"scripts": {
+		"start": "bs serve",
 		"build": "bs export -o docs"
 	},
 	"repository": {

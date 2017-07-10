@@ -205,6 +205,8 @@ On your laptop, please do the following:
     1. add the PostGIS extension to your database
     
     1. confirm PostGIS is enabled on your database
+    
+1. extra credit: if you finish early (or already have these installed), find someone who is still working and help them along
 
 ---
 
@@ -304,7 +306,7 @@ class: impact
     
     1. write a SQL query to join places to countries using a spatial intersection to get a count of place points in each country
     
-    1. Extra credit: How else might we use PostGIS spatial processing functions to ask questions about these data? Come up with a question to ask about these data (or others) through spatial processing, find the right PostGIS functions (I can help you) and write a SQL query to get your answer
+1. extra credit: how else might we use PostGIS spatial processing functions to ask questions about these data? Come up with a question to ask about these data (or others) through spatial processing, find the right PostGIS functions (I can help you) and write a SQL query to get your answer
 
 ---
 
@@ -412,7 +414,7 @@ class: impact
 
 ---
 
-## Ex. 1: PostgreSQL & PostGIS setup
+## Ex. 3: Geoserver install and basic configuration
 
 On your laptop, do the following:
 
@@ -427,6 +429,10 @@ On your laptop, do the following:
     1. create a layer using the countries shapefile
     
     1. preview your countries shapefile layer
+
+1. extra credit 1: create a new style in GeoServer for your countries layer, and edit it to use that style
+
+1. extra credit 2: find another shapefile that interests you, publish it as a layer and create a new style to render you layer in an interesting way.
 
 ---
 

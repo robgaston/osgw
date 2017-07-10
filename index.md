@@ -414,7 +414,7 @@ class: impact
 
 ---
 
-## Ex. 3: Geoserver install and basic configuration
+## Ex. 3: GeoServer install and basic configuration
 
 On your laptop, do the following:
 

@@ -42,7 +42,7 @@ A practical introduction to a powerful stack of free, open-source web tools for 
 
 We're going to focus on a hands-on approach to learning the basics of:
 
-- PostgreSQL/PostGIS (spatially-enabled RDBMS)
+- PostgreSQL/PostGIS (spatially-enabled [RDBMS](https://en.wikipedia.org/wiki/Relational_database_management_system))
 
 - GeoServer (Geospatial data server)
 
@@ -94,7 +94,7 @@ class: impact
 
 ## What is PostgreSQL?
 
-[PostgreSQL](https://www.postgresql.org/) is a free and open-source [relational database management system (RDBMS)](https://en.wikipedia.org/wiki/Relational_database_management_system), first released in 1996.  It is powerful, secure and fully featured.
+[PostgreSQL](https://www.postgresql.org/) is a free and open-source [relational database management system (RDBMS)](https://en.wikipedia.org/wiki/Relational_database_management_system), first released in 1996.  It is powerful, secure and fully featured while also being easy to install and administer.
 
 --
 
@@ -134,7 +134,7 @@ The language for querying RDBMS's is called [Structured Query Language (SQL)](ht
 
 - lots of [functions](https://postgis.net/docs/reference.html) for working with geospatial data, including:
     
-    - transformation
+    - transformation (such as between different spatial reference systems)
     
     - output formatting
     
@@ -164,10 +164,6 @@ Don't rush out and install these right this second - we're going to do that in j
 
 There are lots of tools for working with PostgreSQL and PostGIS.  The most common are:
 
-- the command line client, `psql`
-    
-    - allows execution of SQL against PostgreSQL databases from a command line
-
 - the GUI client, [PgAdmin4](https://www.pgadmin.org/download/)
 
     - shows a nice tree view of database entities
@@ -175,6 +171,10 @@ There are lots of tools for working with PostgreSQL and PostGIS.  The most commo
     - simple tools for querying data using SQL.
 
     - it is what we will be using during this workshop.
+    
+- the command line client, `psql`
+    
+    - allows execution of SQL against PostgreSQL databases from a command line
 
 ---
 
@@ -294,9 +294,7 @@ class: impact
 
 ## Ex. 2: Loading and querying Geospatial data with PostGIS
 
-On your laptop, please do the following:
-
-1. download the countries and places shapefiles from Natural Earth
+1. download the countries and places shapefiles from [Natural Earth](http://www.naturalearthdata.com/downloads/10m-cultural-vectors)
 
 1. using `shp2pgsql`, load these two shapefiles into PostgreSQL
 
@@ -305,6 +303,8 @@ On your laptop, please do the following:
     1. `select * from` your table to view the data that you just loaded
     
     1. write a SQL query to join places to countries using a spatial intersection to get a count of place points in each country
+    
+    1. Extra credit: How else might we use PostGIS spatial processing functions to ask questions about these data? Come up with a question to ask about these data (or others) through spatial processing, find the right PostGIS functions (I can help you) and write a SQL query to get your answer
 
 ---
 
@@ -348,13 +348,15 @@ class: impact
 
 - There are lots of web-based mapping tools that will consume the open standards used by GeoServer, such as:
 
-    - OpenLayers
+    - [OpenLayers](https://openlayers.org/)
     
-    - ArcGIS Online
+    - [ArcGIS Online](https://www.arcgis.com/home/index.html)
     
-    - Mapbox GL
+    - [Mapbox GL](https://www.mapbox.com/mapbox-gl-js/api/)
     
-    - Leaflet
+    - [Google Earth](https://www.google.com/earth/)
+    
+    - [Leaflet](http://leafletjs.com/) (which we will be using in Day 2 of this workshop)
 
 ---
 

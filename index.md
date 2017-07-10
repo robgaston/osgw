@@ -82,6 +82,8 @@ We're also going to focus solely on a developer environment - we simply won't ha
 
 - if you finish a particular exercise and others are still working, find a student who is still working to help (it's really the *best* way to learn and build confidence)
 
+- be nice to each other!
+
 ---
 
 class: impact

@@ -68,6 +68,22 @@ We're also going to focus solely on a developer environment - we simply won't ha
 
 ---
 
+## As we're working...
+
+- these slides are viewable at [http://rgaston.com/osgw/](http://rgaston.com/osgw/)
+
+- you are encouraged to follow along on your laptop
+
+- there are helpful links throughout that you may want to reference during the exercise
+
+- but, please, try not to jump ahead
+
+- please refrain from starting on the hands-on exercises until I come to those slides or working on the exercises while we're talking
+
+- if you finish a particular exercise and others are still working, find a student who is still working to help (it's really the *best* way to learn and build confidence)
+
+---
+
 class: impact
 
 # Part 1: PostgreSQL & PostGIS basics

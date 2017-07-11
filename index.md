@@ -172,9 +172,13 @@ There are lots of tools for working with PostgreSQL and PostGIS.  The most commo
 
     - it is what we will be using during this workshop.
     
-- the command line client, `psql`
+- the command line client, `psql` (it comes with PostgreSQL)
     
     - allows execution of SQL against PostgreSQL databases from a command line
+    
+- the GIS client, [QGIS](http://www.qgis.org/)
+
+    - does a lot more than just PostGIS, but they go together well
 
 ---
 
@@ -194,9 +198,9 @@ class: impact
 
 On your laptop, please do the following:
 
-1. install PostgreSQL 9.6 with PostGIS 2 (and command line tools)
+1. install [PostgreSQL 9.6 with PostGIS 2](#14) (and command line tools) 
 
-1. install PgAdmin4 (on Windows, you should be able to do this within the Stackbuilder)
+1. install [PgAdmin4](https://www.pgadmin.org/download/) (on Windows, you should be able to do this within the Stackbuilder)
 
 1. using PgAdmin4:
 
@@ -205,7 +209,9 @@ On your laptop, please do the following:
     1. add the PostGIS extension to your database
     
     1. confirm PostGIS is enabled on your database
-    
+
+1. (optional) install [QGIS](http://www.qgis.org/en/site/forusers/download.html) is you want to quickly visualize your PostGIS tables
+
 1. **extra credit**: if you finish early (or already have these installed), find someone who is still working and help them along
 
 ---
@@ -304,7 +310,7 @@ class: impact
 
     1. `select * from` your table to view the data that you just loaded
     
-    1. write a SQL query to join places to countries using a spatial intersection to get a count of place points in each country
+    1. write a SQL query to join places to countries using a spatial intersection to get a count of place points in each country, **hint:** you'll need to use a `join` and a `group by` in your query.  I'll let you figure out which PostGIS function tells you if a polygon *contains* a point.
     
 1. **extra credit**: how else might we use PostGIS spatial processing functions to ask questions about these data? Come up with a question to ask about these data (or others) through spatial processing, find the right PostGIS functions (I can help you) and write a SQL query to get your answer
 

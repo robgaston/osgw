@@ -182,6 +182,51 @@ There are lots of tools for working with PostgreSQL and PostGIS.  The most commo
 
 ---
 
+## Creating a spatially-enabled database (part 1)
+
+To create a spatially-enabled database in PostgreSQL using PgAdmin4:
+
+- if you haven't, create a connection to your local PostgreSQL instance
+
+    - give your connection a "Name" on the "General" tab (something like "localhost")
+
+    - specify the "Host name/adress" as "localhost" on the "Connection" tab
+
+- right-click on the connection name and select "Create" > "Database"
+
+    - give your database a name and hit "Save"
+    
+---
+
+## Creating a spatially-enabled database (part 2)
+
+To enable PostGIS on your database:
+
+- right-click on your database's name in the tree view on the left and select "Query Tool"
+
+- paste the following SQL into the resulting SQL query window, and press the lightning bolt button or f5 to run it:
+
+```SQL
+-- Enable PostGIS (includes raster)
+CREATE EXTENSION postgis;
+-- Enable Topology
+CREATE EXTENSION postgis_topology;
+-- Enable PostGIS Advanced 3D 
+-- and other geoprocessing algorithms
+-- sfcgal not available with all distributions
+CREATE EXTENSION postgis_sfcgal;
+-- fuzzy matching needed for Tiger
+CREATE EXTENSION fuzzystrmatch;
+-- rule based standardizer
+CREATE EXTENSION address_standardizer;
+-- example rule data set
+CREATE EXTENSION address_standardizer_data_us;
+-- Enable US Tiger Geocoder
+CREATE EXTENSION postgis_tiger_geocoder;
+```
+
+---
+
 class: impact
 
 ## Demo: Creating a spatially-enabled database with PgAdmin4

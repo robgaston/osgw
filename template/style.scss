@@ -32,6 +32,9 @@ h1 { color: $primary; }
 h2 { color: $secondary; }
 h3 { color: $tertiary; }
 li { margin-bottom: .25em; };
+pre {
+  font-size: 0.6em;
+}
 pre, code {
   text-align: left;
   font-family: $font-fixed;

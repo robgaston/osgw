@@ -213,6 +213,12 @@ CREATE EXTENSION postgis;
 CREATE EXTENSION postgis_topology;
 ```
 
+- you can verify that PostGIS is enabled on your database by running the following SQL:
+
+```SQL
+SELECT postgis_version();
+```
+
 ---
 
 class: impact

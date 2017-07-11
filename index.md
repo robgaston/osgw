@@ -249,7 +249,7 @@ On your laptop, please do the following:
     
     1. confirm PostGIS is enabled on your database
 
-1. (optional) install [QGIS](http://www.qgis.org/en/site/forusers/download.html) is you want to quickly visualize your PostGIS tables
+1. (optional) install [QGIS](http://www.qgis.org/en/site/forusers/download.html) if you want to quickly visualize your PostGIS tables
 
 1. **extra credit**: if you finish early (or already have these installed), find someone who is still working and help them along
 

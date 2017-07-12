@@ -281,7 +281,7 @@ class: impact
         
         for example:
     
-        `shp2pgsql -I -s 4326 ~/Downloads/zipcodes.shp public.zipcodes | psql -U postgres -d my_database`
+        `shp2pgsql -I -s 4326 ~/Desktop/states.shp public.states | psql -U postgres -d my_database`
 
 ---
 
@@ -293,7 +293,7 @@ class: impact
     
     1. creating a new query with the following SQL (using the name of your table):
         
-        `select * from public.zipcodes;`
+        `select * from public.states;`
 --
         
 - Unfortunately, there is no "map" view currently available in PgAdmin4
@@ -313,7 +313,7 @@ class: impact
 
 - For example, you can recast geometries in a select to a more human-readable [WKT](https://en.wikipedia.org/wiki/Well-known_text) format like so:
     
-    `select *, st_astext(geom) as wkt from public.zipcodes;`
+    `select *, st_astext(geom) as wkt from public.states;`
     
 --
     
@@ -443,7 +443,7 @@ class: impact
     
 - Once added, you can preview the layer from "Layer Preview" section
 
-- Layer styles use the [StyledLayerDescriptor](http://www.opengeospatial.org/standards/sld) standard, new styles can be added from the "Styles" section
+- Layer styles use the [StyledLayerDescriptor](http://www.opengeospatial.org/standards/sld) standard, new styles can be added from the "Styles" section (you can use the [Geoserver SLD cookbook](http://docs.geoserver.org/stable/en/user/styling/sld/cookbook/) as a guide)
 
 ---
 

@@ -194,7 +194,7 @@ To create a spatially-enabled database in PostgreSQL using PgAdmin4:
 
 - right-click on the connection name and select "Create" > "Database"
 
-    - give your database a name and hit "Save"
+    - give your database a name (for example, "osgw") and hit "Save"
     
 ---
 
@@ -279,9 +279,9 @@ class: impact
     
         `shp2pgsql -I -s <SRID> <PATH/TO/SHAPEFILE> <SCHEMA>.<DBTABLE> | psql -U postgres -d <DBNAME>`
         
-        for example:
+    - for example: given a shapefile, `~/Downloads/states/states.shp`, I could load it into a new a table called `states` in my database `osgw` like so:
     
-        `shp2pgsql -I -s 4326 ~/Desktop/states.shp public.states | psql -U postgres -d my_database`
+        `shp2pgsql -I -s 4326 ~/Downloads/states/states.shp public.states | psql -U postgres -d osgw`
 
 ---
 

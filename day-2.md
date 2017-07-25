@@ -136,6 +136,30 @@ class: impact
 
 ---
 
+## What is Leaflet?
+
+---
+
+## Leaflet & GeoServer
+
+---
+
+## What is WMS?
+
+---
+
+class: impact
+
+## Demo: Creating a Leaflet map with a raster layer from GeoServer
+
+---
+
+## Ex. 5:
+
+On your laptop, do the following:
+
+---
+
 class: impact
 
 ## Hands-on Exercise
@@ -151,6 +175,34 @@ class: impact
 class: impact
 
 # Part 6: More Leaflet & GeoJSON - vector layers and interactivity
+
+---
+
+## Why use vectors?
+
+---
+
+## What is GeoJSON?
+
+---
+
+## GeoServer and CORS
+
+---
+
+## Adding a GeoJSON layer to Leaflet
+
+---
+
+class: impact
+
+## Demo: Adding a GeoJSON vector layer to Leaflet from GeoServer
+
+---
+
+## Ex. 6:
+
+On your laptop, do the following:
 
 ---
 

@@ -5,6 +5,11 @@ load shp
 ```sh
 shp2pgsql -I -s 4326 ~/Desktop/ne_50m_admin_1_states_provinces_lakes/ne_50m_admin_1_states_provinces_lakes.shp public.states | psql -U postgres -d geoserver
 ```
+```sql
+select admin, count(*), st_astext(st_union(geom))
+	from public.states
+	group by admin;
+```
 
 SQL queries
 
@@ -28,7 +33,7 @@ solution
 ```sql
 select countries.gid, count(places.geom) as place_count 
     from countries
-    join places 
+    left join places 
     on st_contains(countries.geom, places.geom) 
     group by countries.gid;
 ```
@@ -52,4 +57,13 @@ http://docs.geoserver.org/stable/en/user/styling/sld/cookbook/polygons.html#attr
 	</Fill>
   </PolygonSymbolizer>
 </Rule>
+```
+
+Ex.4
+
+```sql
+create view public.countries as
+	select admin, count(*), st_union(geom)
+		from public.states
+		group by admin;
 ```

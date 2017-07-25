@@ -431,7 +431,7 @@ class: impact
 
 - Before you can add layers, you will need to connect your data source as a new "Data Store"
 
-    - Go to "Data Stores" > "Add a new Store" and follow the instructions for your data source type
+    - Go to "Stores" > "Add a new Store" and follow the instructions for your data source type
     
     - Once added, you will see a list of layers available on the Data Store and an option to publish
     
@@ -499,3 +499,5 @@ class: impact
 # Thanks - see you on July 31!
 
 ...next time: connecting GeoServer to PostgreSQL and viewing data in your own web map...
+
+[day 2 slides](day-2.html)

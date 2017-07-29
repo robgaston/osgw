@@ -166,7 +166,7 @@ class: impact
 
 ```HTML
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.1.0/dist/leaflet.css"/>
-<script src="https://unpkg.com/leaflet@1.1.0/dist/leaflet.js"></script>
+<script src="https://unpkg.com/leaflet@1.1.0/dist/leaflet.js"><\/script>
 ```
 
 ---
@@ -190,7 +190,7 @@ Once you've included the library, you can create a (blank) Leaflet map that fill
 
 <script type="text/javascript">
     var map = L.map('map').setView([0,0], 2);
-</script>
+<\/script>
 ```
 
 ---
@@ -323,7 +323,7 @@ We'll be using [jQuery](https://jquery.com/) (another open-source JavaScript lib
 - to include jQuery on your webpage, add the following tag:
 
 ```html
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"><\/script>
 ```
 
 - with jQuery included, we can request GeoJSON data from GeoServer like so:

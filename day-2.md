@@ -433,11 +433,11 @@ On your laptop, do the following:
 
 1. add "places" to your Leaflet map as a geojson layer
 
-1. add a popup to places points displaying name and population on click
+1. add a popup to the "places" points displaying name and population on click
 
-1. **extra credit 1**: add the countries
+1. **extra credit 1**: add the countries layer as a vector layer.  Restyle the countries on place count and add a popup displaying the name and count.
 
-1. **extra credit 2**: add Mapbox streets as a base layer
+1. **extra credit 2**: add Mapbox streets as a basemap beneath your vector overlays
 
 ---
 

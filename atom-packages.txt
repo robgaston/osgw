@@ -1,0 +1,10 @@
+atom-beautify@0.30.4
+color-picker@2.2.5
+data-atom@0.25.2
+file-icons@2.1.9
+minimap@4.29.0
+open-in-browser@0.5.2
+pigments@0.39.1
+platformio-ide-terminal@2.5.3
+pretty-json@1.6.3
+set-syntax@0.3.2

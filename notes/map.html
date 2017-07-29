@@ -1,0 +1,61 @@
+<title>OSGW</title>
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.1.0/dist/leaflet.css"/>
+<script src="https://unpkg.com/leaflet@1.1.0/dist/leaflet.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+<style media="screen">
+    #map {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+</style>
+
+<div id="map"></div>
+
+<script type="text/javascript">
+    var map = L.map('map').setView([0,0], 2);
+
+    // L.tileLayer.wms('http://localhost:8080/geoserver/ows?', {
+    //     layers: 'cite:countries'
+    // }).addTo(map);
+    
+    L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+        attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
+        id: 'mapbox.streets',
+        accessToken: 'pk.eyJ1Ijoicmdhc3RvbiIsImEiOiJJYTdoRWNJIn0.MN6DrT07IEKXadCU8xpUMg'
+    }).addTo(map);
+
+    $.ajax({
+        url: 'http://localhost:8080/geoserver/ows',
+        data: {
+            service: 'WFS',
+            version: '1.0.0',
+            request: 'GetFeature',
+            typeName: 'cite:states',
+            maxFeatures: 1000,
+            outputFormat: 'text/javascript'
+        },
+        dataType: 'jsonp',
+        jsonpCallback: 'parseResponse',
+        success: function (data) {
+            L.geoJson(data, {
+                onEachFeature: function (feature, layer) {
+                    layer.bindPopup(feature.properties.name + ' (' + feature.properties.admin + ')');
+                },
+                style: function (feature) {
+                    switch (feature.properties.admin) {
+                        case 'United States of America': return {color: "rgb(76, 200, 32)"};
+                        case 'Brazil': return {color: "rgb(193, 45, 46)"};
+                        case 'Australia': return {color: "rgb(143, 130, 244)"};
+                        case 'Canada': return {color: "rgb(226, 37, 236)"};
+                    }
+                }
+            }).addTo(map);
+        }
+    });
+</script>

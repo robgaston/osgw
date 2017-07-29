@@ -49,6 +49,18 @@ blockquote {
   & > p { margin: 0; }
 }
 
+.geojson {
+    pre {
+        font-size: 0.6em;
+    }
+}
+
+.mapbox {
+    pre {
+        font-size: 0.9em;
+    }
+}
+
 
 // Remark base
 // ---------------------------------------------------------------------------

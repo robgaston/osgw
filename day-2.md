@@ -425,15 +425,17 @@ class: impact
 
 On your laptop, do the following:
 
+1. create a layer in GeoServer using the "places" table that we loaded in [Ex. 2](index.html#31)
+
 1. enable JSONP on your Geoserver installation
 
 1. include jQuery on your webpage
 
-1. retrieve "places" data from Geoserver as geojson using jQuery & JSONP
+1. retrieve "places" data from Geoserver as GeoJSON using jQuery & JSONP
 
-1. add "places" to your Leaflet map as a geojson layer
+1. add "places" to your Leaflet map as a GeoJSON layer
 
-1. add a popup to the "places" points displaying name and population on click
+1. add a popup to the "places" points displaying the place's name and population on click
 
 1. **extra credit 1**: add the countries layer as a vector layer.  Restyle the countries on place count and add a popup displaying the name and count.
 

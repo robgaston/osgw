@@ -428,11 +428,11 @@ On your laptop, do the following:
 
 1. create a layer in GeoServer using the "places" table that we loaded in [Ex. 2](index.html#31)
 
-1. enable JSONP on your Geoserver installation
+1. enable JSONP on your GeoServer installation
 
 1. include jQuery on your webpage
 
-1. retrieve "places" data from Geoserver as GeoJSON using jQuery & JSONP
+1. retrieve "places" data from GeoServer as GeoJSON using jQuery & JSONP
 
 1. add "places" to your Leaflet map as a GeoJSON layer
 

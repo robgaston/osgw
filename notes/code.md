@@ -138,16 +138,6 @@ create view public.countries as
 
 Ex.5
 
-web.xml path:
-- `/Applications/GeoServer.app/Contents/Java/webapps/geoserver/WEB-INF/web.xml`
-
-```xml
-<context-param>
-  <param-name>ENABLE_JSONP</param-name>
-  <param-value>true</param-value>
-</context-param>
-```
-
 ```html
 <title>OSGW</title>
 
@@ -176,6 +166,16 @@ web.xml path:
 ```
 
 Ex.6
+
+web.xml path:
+- `/Applications/GeoServer.app/Contents/Java/webapps/geoserver/WEB-INF/web.xml`
+
+```xml
+<context-param>
+  <param-name>ENABLE_JSONP</param-name>
+  <param-value>true</param-value>
+</context-param>
+```
 
 ```html
 <title>OSGW</title>

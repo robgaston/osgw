@@ -303,7 +303,7 @@ In web mapping, using vectors (instead of image tiles, for instance) has a few a
 
     - by default on macOS, the settings XML file can be found here: `/Applications/GeoServer.app/Contents/Java/webapps/geoserver/WEB-INF/web.xml`
 
-    - to enable JSONP, find the setting in the XML file and set it to `true`, like so:
+    - to enable JSONP, find the `ENABLE_JSONP` setting in the XML file (by default it should be around line 40) and ensure that it is uncommented (remove the `<!--` before and the `-->` after) and set to `true`, like so:
     
 ```xml
 <context-param>
@@ -359,18 +359,19 @@ Using the GeoJSON data returned from GeoServer, we can create a new Leaflet GeoJ
 L.geoJson(data).addTo(map);
 ```
 
-Since we're using vector data now, we are able to restyle the layer and add interactivity using the Leaflet API.  For example, we can restyle the United States in green and enable a popup displaying the country name like so:
+Since we're using vector data now, we are able to restyle the layer ([See the Leaflet documentation for styling options](http://leafletjs.com/reference-1.1.0.html#path-option)) and add interactivity using the Leaflet API.
+
+For example, we can restyle the United States in green and enable a popup displaying the country name like so:
 
 ```js
 L.geoJson(data, {
     style: function (feature) {
+        var color = 'blue';
         if (feature.properties.name === 'United States of America') {
-            return {
-                color: "green"
-            };
+            color = 'green';
         }
         return {
-            color: "blue"
+            color: color
         };
     },
     onEachFeature: function (feature, layer) {

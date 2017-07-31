@@ -247,7 +247,7 @@ On your laptop, do the following:
 
 1. create a Leaflet map
 
-1. add the layer you created in [Ex. 4](#18) to your web map as a WMS layer
+1. add the layer you created in [Ex. 4](#19) to your web map as a WMS layer
 
 1. **extra credit**: add the places points as another WMS layer on top of the countries layer 
 

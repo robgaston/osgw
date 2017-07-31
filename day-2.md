@@ -70,6 +70,8 @@ class: impact
 
 - if not, I highly recommend [Atom](https://atom.io/) - it's also free and open-source (and it's totally awesome)
 
+--
+
 - if anyone does not have a text editor installed already, let's take care of that now...
 
 ---
@@ -154,6 +156,8 @@ class: impact
 
 [Leaflet](http://leafletjs.com/) is an open-source JavaScript library for making web maps.
 
+--
+
 - JavaScript libraries are bundles of code that we can use to help us do powerful things
 
 - Leaflet provides a simple [API](https://en.wikipedia.org/wiki/Application_programming_interface) for creating web maps that use a variety of data sources ([complete Leaflet API documentation here](http://leafletjs.com/reference-1.1.0.html))
@@ -202,6 +206,8 @@ Once you've included the library, you can create a (blank) Leaflet map that fill
     - layers can be either raster or vector
     
     - [Leaflet's API](http://leafletjs.com/reference-1.1.0.html) supports creating layers from different data sources
+    
+--
 
 - GeoServer and Leaflet can easily be integrated since they both support open geospatial standards, for example:
 
@@ -261,7 +267,7 @@ class: impact
 
 class: geojson
 
-## Vector data and GeoJSON
+## Vector data & GeoJSON
 
 In web mapping, using vectors (instead of image tiles, for instance) has a few advantages:
 
@@ -293,9 +299,11 @@ In web mapping, using vectors (instead of image tiles, for instance) has a few a
 
 ---
 
-## GeoServer and JSONP
+## GeoServer & JSONP
 
 [JSONP](https://en.wikipedia.org/wiki/JSONP) is a way to request JSON data across hosts as a workaround for the [Same-origin policy](https://en.wikipedia.org/wiki/Same-origin_policy).
+
+--
 
 - Since our webpage isn't running on the same port as GeoServer, we'll need to use JSONP to request vector data
 
@@ -325,6 +333,8 @@ We'll be using [jQuery](https://jquery.com/) (another open-source JavaScript lib
 ```html
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"><\/script>
 ```
+
+--
 
 - with jQuery included, we can request GeoJSON data from GeoServer like so:
 
@@ -358,6 +368,8 @@ Using the GeoJSON data returned from GeoServer, we can create a new Leaflet GeoJ
 ```js
 L.geoJson(data).addTo(map);
 ```
+
+--
 
 Since we're using vector data now, we are able to restyle the layer ([See the Leaflet documentation for styling options](http://leafletjs.com/reference-1.1.0.html#path-option)) and add interactivity using the Leaflet API.
 

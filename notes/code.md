@@ -228,4 +228,3 @@ web.xml path:
     });
 </script>
 ```
-

@@ -220,8 +220,16 @@ web.xml path:
         jsonpCallback: 'parseResponse',
         success: function (data) {
             L.geoJson(data, {
-                onEachFeature: function (feature, layer) {
+				onEachFeature: function (feature, layer) {
                     layer.bindPopup(feature.properties.name + ' (' + feature.properties.admin + ')');
+                },
+                style: function (feature) {
+                    switch (feature.properties.admin) {
+                        case 'United States of America': return {color: "rgb(76, 200, 32)"};
+                        case 'Brazil': return {color: "rgb(193, 45, 46)"};
+                        case 'Australia': return {color: "rgb(143, 130, 244)"};
+                        case 'Canada': return {color: "rgb(226, 37, 236)"};
+                    }
                 }
             }).addTo(map);
         }
